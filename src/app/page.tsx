@@ -1,11 +1,16 @@
+"use client";
+
 import CardHand from "@/components/CardHand";
-import PlayingCard from "@/components/PlayingCard";
-import Image from "next/image";
+import DeckViewer from "@/components/DeckViewer";
+import HeadsUpDisplay from "@/components/HeadsUpDisplay";
+import { defend, strike } from "@/data/cards";
 
 export default function Home() {
   return (
     <main className="w-dvw h-dvh">
-      <CardHand />
+      <HeadsUpDisplay />
+      <DeckViewer />
+      <CardHand cards={[strike, strike, strike, defend, defend, defend]} />
     </main>
   );
 }
